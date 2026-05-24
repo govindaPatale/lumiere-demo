@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>LUMIÈRE — Premium Skincare</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+<!-- Adobe Target at.js -->
+<script>
+window.targetGlobalSettings = {
+  clientCode:    "dentsuglobalpartsbx",
+  imsOrgId:      "REPLACE_WITH_IMS_ORG_ID@AdobeOrg",
+  propertyToken: "69e71743-cb17-a6eb-b872-293b39765a0f",
+  enabled:       true,
+  pageLoadEnabled: true,
+  visitorApiTimeout: 2000,
+};
+</script>
+<script src="https://assets.adobedtm.com/launch-ENxxxxxxx.min.js" async></script>
+<!-- at.js 2.11.8 loaded via Adobe CDN fallback -->
+<script>
+!function(n,i){var t,u,a,c=[],r=function(){c.forEach(function(n){n()})};
+window.adobe=window.adobe||{};window.adobe.target=window.adobe.target||{};
+</script>
+
+<style>
+/* ══════════════════════════════════════════════
+   DESIGN: Luxury editorial — dark cream + gold
+   Cormorant Garamond (display) + DM Sans (body)
+══════════════════════════════════════════════ */
+:root {
+  --cream:   #f5f0e8;
+  --dark:    #1a1610;
+  --gold:    #c9a84c;
+  --gold-lt: #e8d5a0;
+  --muted:   #7a7060;
+  --border:  rgba(201,168,76,0.25);
+  --white:   #ffffff;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--dark);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 48px;
+  background: rgba(245,240,232,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+
+.nav-logo span { color: var(--gold); }
+
+.nav-links {
+  display: flex; gap: 36px; list-style: none;
+}
+
+.nav-links a {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--dark); }
+
+.nav-cta {
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 9px 22px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-cta:hover { background: var(--gold); color: var(--white); }
+
+/* ── HERO ── */
+/* THIS is the mbox zone — target-hero-banner */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 70%),
+    linear-gradient(160deg, #1a1610 0%, #2d2518 40%, #f5f0e8 40.1%);
+}
+
+.hero-bg-texture {
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-content {
+  position: relative; z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100%; max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  gap: 60px;
+}
+
+.hero-left { color: var(--cream); }
+
+.hero-eyebrow {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 32px; height: 1px;
+  background: var(--gold);
+}
+
+/* 
+  ══════════════════════════════════════════
+  TARGET MBOX: demo-hero-headline
+  A/B test will swap this h1 text
+  ══════════════════════════════════════════
+*/
+.hero-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 5.5vw, 76px);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+  color: var(--cream);
+}
+
+.hero-headline em {
+  font-style: italic;
+  color: var(--gold-lt);
+}
+
+.hero-sub {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(245,240,232,0.65);
+  max-width: 420px;
+  margin-bottom: 40px;
+}
+
+/* 
+  ══════════════════════════════════════════
+  TARGET MBOX: demo-hero-cta
+  A/B test will swap this CTA button
+  ══════════════════════════════════════════
+*/
+.hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  background: var(--gold);
+  color: var(--dark);
+  text-decoration: none;
+  transition: background 0.25s, transform 0.2s;
+  position: relative; overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: rgba(255,255,255,0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+
+.btn-primary:hover::after { transform: translateX(0); }
+.btn-primary:hover { transform: translateY(-1px); }
+
+.btn-secondary {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,0.6);
+  text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+  transition: color 0.2s;
+}
+
+.btn-secondary:hover { color: var(--cream); }
+
+.btn-arrow { font-size: 16px; transition: transform 0.2s; }
+.btn-secondary:hover .btn-arrow { transform: translateX(4px); }
+
+.hero-social-proof {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(245,240,232,0.12);
+  display: flex; gap: 36px;
+}
+
+.proof-item { }
+.proof-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--gold-lt);
+  line-height: 1;
+}
+.proof-label {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,0.4);
+  margin-top: 4px;
+}
+
+/* Hero right — product visual */
+.hero-right {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.product-stage {
+  position: relative;
+  width: 420px; height: 520px;
+}
+
+.product-circle {
+  position: absolute;
+  width: 380px; height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(201,168,76,0.18), rgba(201,168,76,0.04));
+  border: 1px solid rgba(201,168,76,0.2);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse-ring 4s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(1.04); opacity: 0.7; }
+}
+
+.product-main {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -52%);
+  width: 200px;
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.3));
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(-50%, -52%) translateY(0px); }
+  50% { transform: translate(-50%, -52%) translateY(-12px); }
+}
+
+/* SVG product bottle */
+.product-svg { width: 200px; height: 300px; }
+
+.product-badge {
+  position: absolute;
+  bottom: 60px; right: 20px;
+  background: var(--gold);
+  color: var(--dark);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  animation: float 6s ease-in-out infinite 1s;
+}
+
+.product-tag {
+  position: absolute;
+  top: 60px; left: 0;
+  background: rgba(245,240,232,0.95);
+  color: var(--dark);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 10px 16px;
+  border-left: 2px solid var(--gold);
+  animation: float 6s ease-in-out infinite 2s;
+}
+
+/* ── MBOX INDICATOR (visible for demo) ── */
+.mbox-indicator {
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  border: 2px dashed rgba(201,168,76,0.4);
+  pointer-events: none;
+  display: none; /* shown via ?debug=true */
+}
+
+body.debug-mode .mbox-indicator { display: block; }
+body.debug-mode .mbox-label {
+  display: flex !important;
+}
+
+.mbox-label {
+  display: none;
+  position: absolute;
+  top: 6px; left: 6px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--gold);
+  color: var(--dark);
+  padding: 3px 8px;
+  z-index: 10;
+}
+
+/* ── PRODUCTS STRIP ── */
+.products {
+  padding: 100px 48px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  display: flex; align-items: center; gap: 12px;
+}
+
+.section-label::after {
+  content: '';
+  display: block;
+  flex: 1; height: 1px;
+  background: var(--border);
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 3.5vw, 52px);
+  font-weight: 300;
+  line-height: 1.15;
+  margin-bottom: 56px;
+  max-width: 500px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.product-card {
+  background: var(--white);
+  padding: 40px 32px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.product-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
+.product-card:hover::before { transform: scaleX(1); }
+
+.product-card-img {
+  width: 100%; height: 200px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 28px;
+}
+
+.product-card-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.product-card-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.product-card-desc {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.product-card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.product-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.product-add {
+  width: 36px; height: 36px;
+  border: 1px solid var(--dark);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.product-add:hover { background: var(--dark); color: var(--white); }
+
+/* ── TARGET DEBUG PANEL ── */
+.target-debug {
+  display: none;
+  position: fixed;
+  bottom: 20px; right: 20px;
+  background: var(--dark);
+  color: var(--cream);
+  font-family: 'DM Sans', monospace;
+  font-size: 11px;
+  padding: 16px 20px;
+  border: 1px solid var(--gold);
+  z-index: 999;
+  min-width: 260px;
+  max-width: 340px;
+}
+
+body.debug-mode .target-debug { display: block; }
+
+.debug-title {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.debug-row {
+  display: flex; justify-content: space-between; gap: 10px;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  font-size: 10.5px;
+}
+
+.debug-row:last-child { border-bottom: none; }
+.debug-key { color: rgba(245,240,232,0.5); }
+.debug-val { color: var(--gold-lt); font-weight: 500; text-align: right; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--dark);
+  color: rgba(245,240,232,0.4);
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ── ANIMATIONS ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── EXPERIENCE VARIANT CLASSES ── */
+/* Control: dark hero (default above) */
+
+/* Variant B: Light hero — injected by Target */
+.variant-light #hero .hero-bg {
+  background: linear-gradient(160deg, #f5f0e8 0%, #ede5d4 100%);
+}
+.variant-light .hero-left { color: var(--dark); }
+.variant-light .hero-headline { color: var(--dark); }
+.variant-light .hero-sub { color: var(--muted); }
+.variant-light .hero-eyebrow { color: var(--gold); }
+.variant-light .btn-secondary { color: var(--muted); }
+
+/* Variant C: Bold red CTA — injected by Target */
+.variant-red .btn-primary { background: #cc2200; }
+.variant-red .btn-primary:hover { background: #a81b00; }
+
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  .hero-content { grid-template-columns: 1fr; padding: 0 24px; }
+  .hero-right { display: none; }
+  .products { padding: 60px 24px; }
+  .products-grid { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: 12px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav>
+  <div class="nav-logo">Lumi<span>è</span>re</div>
+  <ul class="nav-links">
+    <li><a href="#">Collection</a></li>
+    <li><a href="#">Ritual</a></li>
+    <li><a href="#">Science</a></li>
+    <li><a href="#">Journal</a></li>
+  </ul>
+  <a href="#" class="nav-cta">Shop Now</a>
+</nav>
+
+<!-- ═══════════ HERO — TARGET MBOX ZONE ═══════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-bg-texture"></div>
+
+  <div class="hero-content">
+    <div class="hero-left">
+
+      <!-- MBOX: demo-hero-headline -->
+      <div class="mbox-zone" id="demo-hero-headline" style="position:relative">
+        <div class="mbox-indicator"></div>
+        <div class="mbox-label">mbox: demo-hero-headline</div>
+
+        <div class="hero-eyebrow">New Collection 2026</div>
+        <h1 class="hero-headline" id="hero-headline-text">
+          Skin that tells<br><em>your story</em>
+        </h1>
+        <p class="hero-sub" id="hero-sub-text">
+          Science-backed formulas crafted for luminous, healthy skin.
+          Discover the ritual that transforms your morning.
+        </p>
+      </div>
+
+      <!-- MBOX: demo-hero-cta -->
+      <div class="mbox-zone" id="demo-hero-cta" style="position:relative">
+        <div class="mbox-indicator"></div>
+        <div class="mbox-label">mbox: demo-hero-cta</div>
+
+        <div class="hero-actions">
+          <a href="#products" class="btn-primary" id="hero-cta-btn">
+            Explore Collection
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M1 7h12M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#" class="btn-secondary" id="hero-secondary-btn">
+            Learn our ritual <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-social-proof">
+        <div class="proof-item">
+          <div class="proof-num">94%</div>
+          <div class="proof-label">saw results in 14 days</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">200k+</div>
+          <div class="proof-label">rituals started</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">4.9★</div>
+          <div class="proof-label">average rating</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product visual -->
+    <div class="hero-right">
+      <div class="product-stage">
+        <div class="product-circle"></div>
+        <div class="product-main">
+          <!-- Elegant SVG product bottle -->
+          <svg class="product-svg" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Bottle body -->
+            <rect x="55" y="100" width="90" height="170" rx="12" fill="url(#bottleGrad)"/>
+            <!-- Bottle neck -->
+            <rect x="72" y="70" width="56" height="38" rx="6" fill="url(#bottleGrad)"/>
+            <!-- Cap -->
+            <rect x="68" y="48" width="64" height="28" rx="8" fill="url(#capGrad)"/>
+            <!-- Label -->
+            <rect x="65" y="140" width="70" height="90" rx="4" fill="rgba(245,240,232,0.12)"/>
+            <!-- Label text lines -->
+            <rect x="75" y="155" width="50" height="2" rx="1" fill="rgba(201,168,76,0.6)"/>
+            <rect x="78" y="163" width="44" height="8" rx="1" fill="rgba(245,240,232,0.5)"/>
+            <rect x="80" y="177" width="40" height="2" rx="1" fill="rgba(245,240,232,0.2)"/>
+            <rect x="82" y="183" width="36" height="2" rx="1" fill="rgba(245,240,232,0.2)"/>
+            <rect x="82" y="189" width="36" height="2" rx="1" fill="rgba(245,240,232,0.2)"/>
+            <!-- Shine -->
+            <rect x="62" y="108" width="8" height="60" rx="4" fill="rgba(255,255,255,0.12)"/>
+            <!-- Gold ring -->
+            <rect x="55" y="98" width="90" height="8" rx="4" fill="url(#goldGrad)"/>
+            <rect x="72" y="100" width="56" height="5" rx="2" fill="url(#goldGrad)"/>
+            <defs>
+              <linearGradient id="bottleGrad" x1="55" y1="100" x2="145" y2="270" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#2d2518"/>
+                <stop offset="100%" stop-color="#1a1610"/>
+              </linearGradient>
+              <linearGradient id="capGrad" x1="68" y1="48" x2="132" y2="76" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#c9a84c"/>
+                <stop offset="100%" stop-color="#a07830"/>
+              </linearGradient>
+              <linearGradient id="goldGrad" x1="0" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.6"/>
+                <stop offset="50%" stop-color="#e8d5a0"/>
+                <stop offset="100%" stop-color="#c9a84c" stop-opacity="0.6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="product-badge">New Formula</div>
+        <div class="product-tag">Bestseller · 4.9★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PRODUCTS ═══════════ -->
+<section class="products" id="products">
+  <div class="section-label">Our Collection</div>
+  <h2 class="section-title fade-up">Curated formulas for every ritual</h2>
+
+  <div class="products-grid">
+    <!-- Product 1 -->
+    <div class="product-card fade-up">
+      <div class="product-card-img">
+        <svg viewBox="0 0 120 180" width="80" fill="none">
+          <rect x="25" y="50" width="70" height="110" rx="10" fill="#2d2518"/>
+          <rect x="35" y="28" width="50" height="28" rx="5" fill="#2d2518"/>
+          <rect x="30" y="25" width="60" height="10" rx="5" fill="#c9a84c"/>
+          <rect x="35" y="80" width="50" height="60" rx="3" fill="rgba(245,240,232,0.08)"/>
+          <rect x="42" y="90" width="36" height="1.5" rx="1" fill="rgba(201,168,76,0.5)"/>
+          <rect x="44" y="96" width="32" height="6" rx="1" fill="rgba(245,240,232,0.4)"/>
+          <rect x="28" y="48" width="64" height="6" rx="3" fill="url(#g1)"/>
+          <defs><linearGradient id="g1" x1="0" y1="0" x2="120" y2="0"><stop stop-color="#c9a84c" stop-opacity=".5"/><stop offset=".5" stop-color="#e8d5a0"/><stop offset="1" stop-color="#c9a84c" stop-opacity=".5"/></linearGradient></defs>
+        </svg>
+      </div>
+      <div class="product-card-num">01 / Serum</div>
+      <div class="product-card-name">Radiance Elixir</div>
+      <div class="product-card-desc">Vitamin C + niacinamide complex for visible luminosity in 7 days.</div>
+      <div class="product-card-footer">
+        <div class="product-price">£68</div>
+        <div class="product-add">+</div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card fade-up" style="transition-delay:0.1s">
+      <div class="product-card-img">
+        <svg viewBox="0 0 120 180" width="80" fill="none">
+          <ellipse cx="60" cy="120" rx="38" ry="48" fill="#2d2518"/>
+          <ellipse cx="60" cy="75" rx="20" ry="10" fill="#2d2518"/>
+          <rect x="48" y="55" width="24" height="22" rx="4" fill="#c9a84c"/>
+          <ellipse cx="60" cy="72" rx="38" ry="6" fill="#c9a84c" opacity=".4"/>
+          <rect x="32" y="105" width="56" height="50" rx="3" fill="rgba(245,240,232,0.06)"/>
+          <rect x="40" y="115" width="40" height="1.5" rx="1" fill="rgba(201,168,76,0.5)"/>
+          <rect x="42" y="121" width="36" height="6" rx="1" fill="rgba(245,240,232,0.35)"/>
+        </svg>
+      </div>
+      <div class="product-card-num">02 / Moisturiser</div>
+      <div class="product-card-name">Velvet Crème</div>
+      <div class="product-card-desc">24-hour hydration with hyaluronic acid and peptide complex.</div>
+      <div class="product-card-footer">
+        <div class="product-price">£52</div>
+        <div class="product-add">+</div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card fade-up" style="transition-delay:0.2s">
+      <div class="product-card-img">
+        <svg viewBox="0 0 120 180" width="80" fill="none">
+          <rect x="30" y="60" width="60" height="90" rx="30" fill="#2d2518"/>
+          <rect x="42" y="40" width="36" height="26" rx="5" fill="#2d2518"/>
+          <rect x="38" y="36" width="44" height="10" rx="5" fill="#c9a84c"/>
+          <rect x="36" y="95" width="48" height="45" rx="3" fill="rgba(245,240,232,0.07)"/>
+          <rect x="43" y="105" width="34" height="1.5" rx="1" fill="rgba(201,168,76,0.5)"/>
+          <rect x="45" y="111" width="30" height="6" rx="1" fill="rgba(245,240,232,0.38)"/>
+          <rect x="32" y="58" width="56" height="6" rx="3" fill="url(#g3)"/>
+          <defs><linearGradient id="g3" x1="0" y1="0" x2="120" y2="0"><stop stop-color="#c9a84c" stop-opacity=".5"/><stop offset=".5" stop-color="#e8d5a0"/><stop offset="1" stop-color="#c9a84c" stop-opacity=".5"/></linearGradient></defs>
+        </svg>
+      </div>
+      <div class="product-card-num">03 / Eye Care</div>
+      <div class="product-card-name">Golden Eye Serum</div>
+      <div class="product-card-desc">Caffeine + retinol formula that visibly reduces fine lines overnight.</div>
+      <div class="product-card-footer">
+        <div class="product-price">£78</div>
+        <div class="product-add">+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ DEBUG PANEL (shown with ?debug=true) ═══════════ -->
+<div class="target-debug" id="targetDebug">
+  <div class="debug-title">⚡ Adobe Target Debug</div>
+  <div class="debug-row"><span class="debug-key">Client Code</span><span class="debug-val">dentsuglobalpartsbx</span></div>
+  <div class="debug-row"><span class="debug-key">at.js</span><span class="debug-val">2.11.8</span></div>
+  <div class="debug-row"><span class="debug-key">Mbox 1</span><span class="debug-val">demo-hero-headline</span></div>
+  <div class="debug-row"><span class="debug-key">Mbox 2</span><span class="debug-val">demo-hero-cta</span></div>
+  <div class="debug-row"><span class="debug-key">Experience</span><span class="debug-val" id="debugExperience">Control</span></div>
+  <div class="debug-row"><span class="debug-key">Property Token</span><span class="debug-val">69e71743…</span></div>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="footer-logo">Lumière</div>
+  <div>© 2026 Lumière Skincare — Adobe Target POC Demo Site</div>
+  <div>Built with Adobe Target at.js 2.11.8</div>
+</footer>
+
+<!-- ═══════════ at.js 2.11.8 ═══════════ -->
+<script src="https://assets.adobedtm.com/extensions/EP123/AppMeasurement.js" onerror="loadAtJsFallback()"></script>
+<script>
+// ── Load at.js directly ──
+(function() {
+  var s = document.createElement('script');
+  s.src = 'https://dentsuglobalpartsbx.tt.omtrdc.net/cdn/target-vec.js';
+  s.async = true;
+  s.onerror = function() { loadAtJsFallback(); };
+  document.head.appendChild(s);
+
+  // Primary at.js load
+  var atjs = document.createElement('script');
+  atjs.src = 'https://assets.adobedtm.com/at.js';
+  atjs.async = false;
+  atjs.onerror = function() { loadAtJsFallback(); };
+  document.head.appendChild(atjs);
+})();
+
+function loadAtJsFallback() {
+  // at.js 2.11.8 minimal implementation for standalone use
+  // Replace the src below with your actual at.js download from Adobe Target UI
+  // Administration > Implementation > Download at.js
+  console.warn('[Target] at.js not loaded from CDN — please host at.js locally');
+}
+</script>
+
+<!-- ═══════════ MBOX FIRES ═══════════ -->
+<script>
+// ── Debug mode ──
+if (window.location.search.includes('debug=true')) {
+  document.body.classList.add('debug-mode');
+}
+
+// ── Fire mboxes when at.js is ready ──
+function fireTargetMboxes() {
+  if (typeof adobe === 'undefined' || !adobe.target) {
+    setTimeout(fireTargetMboxes, 100);
+    return;
+  }
+
+  // Mbox 1: Hero Headline + Subtext
+  adobe.target.getOffer({
+    mbox: 'demo-hero-headline',
+    params: {
+      'at_property': '69e71743-cb17-a6eb-b872-293b39765a0f',
+      'page.category': 'homepage',
+      'page.type': 'landing',
+    },
+    success: function(offer) {
+      adobe.target.applyOffer({
+        mbox: 'demo-hero-headline',
+        selector: '#demo-hero-headline',
+        offer: offer,
+      });
+      document.getElementById('debugExperience').textContent = 'Variant B';
+    },
+    error: function(status, error) {
+      console.log('[Target] demo-hero-headline: using control', status);
+    }
+  });
+
+  // Mbox 2: CTA Button
+  adobe.target.getOffer({
+    mbox: 'demo-hero-cta',
+    params: {
+      'at_property': '69e71743-cb17-a6eb-b872-293b39765a0f',
+    },
+    success: function(offer) {
+      adobe.target.applyOffer({
+        mbox: 'demo-hero-cta',
+        selector: '#demo-hero-cta',
+        offer: offer,
+      });
+    },
+    error: function(status, error) {
+      console.log('[Target] demo-hero-cta: using control', status);
+    }
+  });
+}
+
+// ── Also trigger global mbox ──
+document.addEventListener('DOMContentLoaded', function() {
+  fireTargetMboxes();
+});
+
+// ── Fade-up scroll animations ──
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-up').forEach(function(el) {
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
