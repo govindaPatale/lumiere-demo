@@ -17,12 +17,7 @@ window.targetGlobalSettings = {
   visitorApiTimeout: 2000,
 };
 </script>
-<script src="https://assets.adobedtm.com/launch-ENxxxxxxx.min.js" async></script>
-<!-- at.js 2.11.8 loaded via Adobe CDN fallback -->
-<script>
-!function(n,i){var t,u,a,c=[],r=function(){c.forEach(function(n){n()})};
-window.adobe=window.adobe||{};window.adobe.target=window.adobe.target||{};
-</script>
+<!-- at.js loaded below before </body> -->
 
 <style>
 /* ══════════════════════════════════════════════
@@ -784,32 +779,8 @@ footer {
   <div>Built with Adobe Target at.js 2.11.8</div>
 </footer>
 
-<!-- ═══════════ at.js 2.11.8 ═══════════ -->
-<script src="https://assets.adobedtm.com/extensions/EP123/AppMeasurement.js" onerror="loadAtJsFallback()"></script>
-<script>
-// ── Load at.js directly ──
-(function() {
-  var s = document.createElement('script');
-  s.src = 'https://dentsuglobalpartsbx.tt.omtrdc.net/cdn/target-vec.js';
-  s.async = true;
-  s.onerror = function() { loadAtJsFallback(); };
-  document.head.appendChild(s);
-
-  // Primary at.js load
-  var atjs = document.createElement('script');
-  atjs.src = 'https://assets.adobedtm.com/at.js';
-  atjs.async = false;
-  atjs.onerror = function() { loadAtJsFallback(); };
-  document.head.appendChild(atjs);
-})();
-
-function loadAtJsFallback() {
-  // at.js 2.11.8 minimal implementation for standalone use
-  // Replace the src below with your actual at.js download from Adobe Target UI
-  // Administration > Implementation > Download at.js
-  console.warn('[Target] at.js not loaded from CDN — please host at.js locally');
-}
-</script>
+<!-- ═══════════ at.js 2.11.8 (local) ═══════════ -->
+<script src="at.js"></script>
 
 <!-- ═══════════ MBOX FIRES ═══════════ -->
 <script>
